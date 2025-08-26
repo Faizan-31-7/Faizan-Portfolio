@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Faizan-Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-animated">
+        <div class="bg-gradient-circle circle1"></div>
+        <div class="bg-gradient-circle circle2"></div>
+        <div class="bg-gradient-circle circle3"></div>
+        <canvas id="bg-particles"></canvas>
+    </div>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+
+            <button type="button" class="btn" onclick="window.open('https://wa.me/923392005183', '_blank')">
+                <strong>LET'S CONNECT</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+        </nav>
+        <div class="menu-icon" id="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-side">
+                <h3>Hey! I'm</h3>
+                <h1>Muhammad <span>Faizan</span></h1>
+                <h3>I am <span>SEO Expert</span></h3>
+                <p>Digital Marketing Specialist | SEO, Content Writing, Social Growth.</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/faizanboosts/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-faizan-aa6779370/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="home-img">
+                <img src="img1.png" alt="Profile Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>I’m Muhammad Faizan, a passionate Digital Marketing Specialist with expertise in SEO, content creation, and social media growth. My goal is to help brands increase their online visibility, attract the right audience, and achieve measurable results. With a creative mindset and data-driven strategies, I strive to deliver impactful digital experiences that drive success.</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-content">
+            <h2>My Services</h2>
+            <div class="services-list">
+                <div class="service-card">
+                    <i class='bx bx-line-chart service-icon'></i>
+                    <h3>SEO</h3>
+                    <p>Boost your website’s ranking and visibility with proven SEO strategies tailored to your business goals.</p>
+                    <a href="https://wa.me/923392005183" target="_blank" class="contact-btn">Contact Us</a>
+                </div>
+                <div class="service-card">
+                    <i class='bx bx-pencil service-icon'></i>
+                    <h3>Content Writing</h3>
+                    <p>Engaging, high-quality content that attracts, informs, and converts your target audience.</p>
+                    <a href="https://wa.me/923392005183" target="_blank" class="contact-btn">Contact Us</a>
+                </div>
+                <div class="service-card">
+                    <i class='bx bx-share-alt service-icon'></i>
+                    <h3>Social Media Management</h3>
+                    <p>Grow your brand and connect with your audience through effective social media campaigns and management.</p>
+                    <a href="https://wa.me/923392005183" target="_blank" class="contact-btn">Contact Us</a>
+                </div>
+                <div class="service-card">
+                    <i class='bx bx-key service-icon'></i>
+                    <h3>Keyword Research</h3>
+                    <p>Identify the best keywords to target for your business to maximize search engine traffic and reach your audience.</p>
+                    <a href="https://wa.me/923392005183" target="_blank" class="contact-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="projects-content">
+            <h2>My Projects</h2>
+            <p>Explore some of the projects I have worked on, showcasing my skills in digital marketing and SEO.</p>
+            <div class="project-list">
+                <div class="project-card" data-project="0">
+                    <h3>Complete SEO</h3>
+                    <p>Here I did complete SEO of a website and saw a significant growth.</p>
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+                <div class="project-card" data-project="1">
+                    <h3>Article Writing</h3>
+                    <p>Here I wrote an SEO optimized article by doing complete research on the niche given by client.</p>
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+                <div class="project-card" data-project="2">
+                    <h3>On-Page SEO</h3>
+                    <p>I ran an SEO audit, and there were major issues in the On-Page SEO.</p>
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <div id="project-modal" class="modal-overlay" style="display:none;">
+            <div class="project-modal-content">
+                <button class="project-modal-close" title="Close">&times;</button>
+                <div class="project-modal-body">
+                    <div class="project-modal-image-area">
+                       
+                    </div>
+                    <div class="project-modal-info">
+                        <h3 id="project-modal-title"></h3>
+                        <p id="project-modal-desc"></p>
+                        <div id="project-modal-extra"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="img-enlarge-modal">
+        <span id="img-enlarge-close" class="modal-close" style="position: absolute; top: 32px; right: 48px; font-size: 2.5rem; color: #fff; z-index: 2; cursor: pointer;">&times;</span>
+        <img src="" alt="Enlarged Project Image" />
+    </div>
+
+    <section class="certifications-highlight" id="certifications">
+        <div class="certifications-bg"></div>
+        <div class="certifications-content">
+            <h2 class="certifications-title">My Certifications</h2>
+            <p class="certifications-desc">These certifications represent my dedication to professional growth and expertise in digital marketing, SEO, and related fields. Each certificate is a milestone in my journey to deliver outstanding results for clients and brands.</p>
+            <div class="certifications-gallery">
+                <div class="certification-card">
+                    <img src="Digital Marketing Edify.png" alt="Digital Marketing Edify Certificate">
+                    <h4>Digital Marketing Edify</h4>
+                </div>
+                <div class="certification-card">
+                    <img src="Coursera.png" alt="Coursera Certificate">
+                    <h4>Coursera: SEO Specialization</h4>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <footer class="portfolio-footer-alt">
+        <div class="footer-alt-content">
+            <div class="footer-alt-main">
+                <h3 class="footer-alt-title">Muhammad Faizan</h3>
+                <p class="footer-alt-desc">Digital Marketing Specialist | SEO Expert</p>
+            </div>
+            <div class="footer-alt-social">
+                <a href="https://www.instagram.com/faizanboosts/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-faizan-aa6779370/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <div class="footer-alt-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+            </div>
+        </div>
+        <div class="footer-alt-bottom">
+            <span>&copy; 2025 Muhammad Faizan. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
